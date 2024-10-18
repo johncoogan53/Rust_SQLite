@@ -19,7 +19,7 @@ pub fn create_table(conn: &Connection, table_name: &str) -> Result<()> {
     Ok(()) //returns nothing except an error if it occurs
 }
 
-//query
+//Read
 pub fn query_exec(conn: &Connection, query_string: &str) -> Result<()> {
     // Prepare the query and iterate over the rows returned
     let mut stmt = conn.prepare(query_string)?;
@@ -29,13 +29,14 @@ pub fn query_exec(conn: &Connection, query_string: &str) -> Result<()> {
         // Assuming the `users` table has an `id` and `name` column
         let id: i32 = row.get(0)?;
         let name: String = row.get(1)?;
-        Ok((id, name))
+        let age: i32 = row.get(2)?;
+        Ok((id, name,age))
     })?;
 
     // Iterate over the rows and print the results
     for row in rows {
-        let (id, name) = row?;
-        println!("ID: {}, Name: {}", id, name);
+        let (id, name,age) = row?;
+        println!("ID: {}, Name: {}, Age: {}", id, name, age);
     }
 
     Ok(())

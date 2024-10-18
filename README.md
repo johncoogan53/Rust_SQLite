@@ -77,8 +77,20 @@ See main.rs for a commented example of how we make our CLI. Note that by using c
 
 ![alt text](<readme_images/image copy 4.png>)
 
+Before you begin taking a look at the code, be sure to add your compiled binary (--release) to your path, this way you can use your CLI normally without using:
 
+>cargo run -- -\<flag> argument
+
+and instead:
+
+>sqlite -c users
 
 Command to add compiled binary to path for use:
 
-export PATH=$PATH:/workspaces/Rust_SQLite/sqlite/target/release
+*If in codespaces*
+
+>export PATH=$PATH:/workspaces/\<REPO_NAME>/sqlite/target/release
+
+Once you build your CLI binary you can the use it like a regular CLI:
+![alt text](<readme_images/image copy 5.png>)
+
