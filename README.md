@@ -1,7 +1,5 @@
 [![CI](https://github.com/johncoogan53/Rust_SQLite/actions/workflows/CI.yml/badge.svg)](https://github.com/johncoogan53/Rust_SQLite/actions/workflows/CI.yml)
 
-[![CLI Binary Download](https://github.com/johncoogan53/Rust_SQLite/actions/workflows/CI.yml/badge.svg)](https://github.com/johncoogan53/Rust_SQLite/actions/runs/11409777647/artifacts/2075804439)
-
 # Rust SQLite Demo Repository
 
 ## Setup
@@ -117,3 +115,7 @@ Load data also expects the same specific schema, see if you can modify this code
 * There is no function yet for update (which would use conn.execute() without a query map). See if you can make it!
 
 * Tests! There is an example of Rust testing in the add crate from the template. I only have so much free time so, naturally, testing has fallen by the wayside. See if you can test some of the library functions.
+
+## Binary Download Link
+
+https://github.com/johncoogan53/Rust_SQLite/actions/runs/11409825326/artifacts/2075818879
