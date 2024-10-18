@@ -46,8 +46,12 @@ we include derive as a feature so we can access traits included in the library (
 
 >cargo add rusqlite
 
+>cargo add csv 
+
+for csv ingestion
+
 And our Cargo.toml file now has our dependencies:
-![alt text](<readme_images/image copy 2.png>)
+![alt text](<readme_images/image copy 7.png>)
 
 ## Side note about builds
 
