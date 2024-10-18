@@ -1,3 +1,7 @@
+[![CI](https://github.com/johncoogan53/Rust_SQLite/actions/workflows/CI.yml/badge.svg)](https://github.com/johncoogan53/Rust_SQLite/actions/workflows/CI.yml)
+
+[![CLI Binary Download](https://github.com/johncoogan53/Rust_SQLite/actions/workflows/CI.yml/badge.svg)](https://github.com/johncoogan53/Rust_SQLite/actions/runs/11409777647/artifacts/2075804439)
+
 # Rust SQLite Demo Repository
 
 ## Setup
