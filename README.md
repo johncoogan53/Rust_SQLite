@@ -77,3 +77,8 @@ See main.rs for a commented example of how we make our CLI. Note that by using c
 
 ![alt text](<readme_images/image copy 4.png>)
 
+
+
+Command to add compiled binary to path for use:
+
+export PATH=$PATH:/workspaces/Rust_SQLite/sqlite/target/release
