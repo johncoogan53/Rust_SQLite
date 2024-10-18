@@ -94,3 +94,17 @@ Command to add compiled binary to path for use:
 Once you build your CLI binary you can the use it like a regular CLI:
 ![alt text](<readme_images/image copy 5.png>)
 
+This demo example shows you how you might structure a DB CLI with Rust while trying to avoid going into too much detail about Rust rules. 
+
+Notable Gaps for students to build out:
+
+* This works for a specific toy csv
+
+![alt text](<readme_images/image copy 6.png>)
+
+query_exec expects a specified schema, there are ways to make this more generalized but Rust prefers for you to be explicit about what you expect, this is part of its safety benefits.
+
+Load data also expects the same specific schema, see if you can modify this code to fit your desired data.
+
+* There is no function yet for update (which would use conn.execute() without a query map). See if you can make it!
+

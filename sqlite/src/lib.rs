@@ -50,11 +50,12 @@ pub fn drop_table(conn: &Connection, table_name: &str) -> Result<()> {
     Ok(())
 }
 
+//load data from a file path to a table
 pub fn load_data_from_csv(
     conn: &Connection,
     table_name: &str,
     file_path: &str,
-) -> Result<(), Box<dyn Error>> {
+) -> Result<(), Box<dyn Error>> { //Box<dyn Error> is a trait object that can represent any error type
     let file = File::open(file_path)?;
     let mut rdr = ReaderBuilder::new().from_reader(file);
 
@@ -62,10 +63,10 @@ pub fn load_data_from_csv(
         "INSERT INTO {} (id, name, age) VALUES (?, ?, ?)",
         table_name
     );
-
+    //this is a loop that expects a specific schema, you will need to change this if you have a different schema
     for result in rdr.records() {
         let record = result?;
-        let id: i32 = record[0].parse()?;
+        let id: i32 = record[0].parse()?; //.parse() is a method that converts a string into a number
         let name: &str = &record[1];
         let age: i32 = record[2].parse()?;
 
